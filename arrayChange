@@ -1,0 +1,13 @@
+function arrayChange(inputArray) {
+  var moves = 0;
+  var target = inputArray[0] + 1;
+  for (var i = 1; i < inputArray.length; i++) {
+    if (inputArray[i] < target) {
+      moves += target - inputArray[i];
+      target++;
+    } else {
+      target = inputArray[i] + 1;
+    }
+  }
+  return moves;
+}
